@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Friend Finder</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- JQuery Link -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Friend Finder Survey</h1>
+        </div>
+
+        <div id="surveyPanel">
+            <h2>About You</h2>
+            <h4>Name (Required): </h4>
+            <input type="text", id="userName", class="form-control" required>
+            <h4>Link to Your Photo: </h4>
+            <input type="text", id="userPhoto" class="form-control" required>
+    
+            <hr>
+    
+            <h4>You would Travel the world if you won the lottery</h4>
+            <select data-placeholder="" class="chosen-select" id="q1">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+    
+            <h4>You would rather talk on the email rather than text or email</h4>
+            <select data-placeholder="" class="chosen-select" id="q2">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+    
+            <h4>Your ideal night would include staying at home</h4>
+            <select data-placeholder="" class="chosen-select" id="q3">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+    
+            <h4>You are a cat person</h4>
+            <select data-placeholder="" class="chosen-select" id="q4">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+    
+            <h4>You are a morning person</h4>
+            <select data-placeholder="" class="chosen-select" id="q5">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+    
+            <h4>Your favorite ice cream flavor is vanilla</h4>
+            <select data-placeholder="" class="chosen-select" id="q6">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+                
+            <h4>You're more of an outdoors person</h4>
+            <select data-placeholder="" class="chosen-select" id="q7">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select> 
+    
+            <h4>You would rather talk on the email rather than text or email</h4>
+            <select data-placeholder="" class="chosen-select" id="q8">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select> 
+    
+            <h4>You are an outdoors person</h4>
+            <select data-placeholder="" class="chosen-select" id="q9">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select> 
+    
+            <h4>You are an outdoors person</h4>
+            <select data-placeholder="" class="chosen-select" id="q10">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select> 
+    
+    
+            <br><br>
+    
+            <button type="submit" class="btn btn-primary" id="submit">SUBMIT</button>
+        </div>
+
+
+
+
+
+        <div class="container" id="matchScreen">
+            <h1 id="matchFriendName"></h1>
+            <img id="matchFriendImg" src="" alt="">
+    
+            <button type="button" class="btn btn-primary" data-dismiss="modal" id="close">Close</button>
+        </div>
+
+
+
+    
+    </div>
+
+    <script type="text/javascript">
+
+        var currentURL = window.location.origin;
+
+        $("#matchScreen").hide(); 
+        $("#submit").on("click", function() {
+            // $("#surveyPanel").hide();
+            $("#matchScreen").show();
+
+            var userData = {
+                name: $("#userName").val().trim(),
+                photo: $("#userPhoto").val().trim(),
+                scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val() ]
+            }
+
+        
+            console.log("User Info: " + userData);
+            console.log("User Score: " + userData.scores);
+
+            $.post("/api/friends", userData, function(data){
+                $("#matchFriendName").text(data.name);
+                $('#matchFriendImg').attr("src", data.photo);
+    
+                console.log("Name: " + data.name);
+            });
+            
+            $("#close").on("click", function() {
+                $("#matchScreen").hide();            
+            })
+
+        
+
+
+
+        }) //Document Ready
+
+
+        
+    
+    
+    
+    
+    </script>
+
+</body>
+</html>
