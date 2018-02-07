@@ -104,7 +104,7 @@
                 <option value="5">5 (Strongly Agree)</option>
             </select> 
     
-            <h4>You are an outdoors person</h4>
+            <h4>You perfer the company of others</h4>
             <select data-placeholder="" class="chosen-select" id="q9">
                 <option value=""></option>
                 <option value="1">1 (Strongly Disagree)</option>
@@ -114,7 +114,7 @@
                 <option value="5">5 (Strongly Agree)</option>
             </select> 
     
-            <h4>You are an outdoors person</h4>
+            <h4>You like celery</h4>
             <select data-placeholder="" class="chosen-select" id="q10">
                 <option value=""></option>
                 <option value="1">1 (Strongly Disagree)</option>
@@ -135,10 +135,14 @@
 
 
         <div class="container" id="matchScreen">
-            <h1 id="matchFriendName"></h1>
+            <h1>Your Compatable Friend Match</h1>
+            <br>
+            <h2 id="matchFriendName"></h2>
+            <br>
             <img id="matchFriendImg" src="" alt="">
     
-            <button type="button" class="btn btn-primary" data-dismiss="modal" id="close">Close</button>
+
+            <a href="/../public/home.html">Go to Home Page</a>
         </div>
 
 
@@ -152,7 +156,7 @@
 
         $("#matchScreen").hide(); 
         $("#submit").on("click", function() {
-            // $("#surveyPanel").hide();
+            $("#surveyPanel").hide();
             $("#matchScreen").show();
 
             var userData = {
@@ -171,16 +175,11 @@
     
                 console.log("Name: " + data.name);
             });
-            
-            $("#close").on("click", function() {
-                $("#matchScreen").hide();            
-            })
-
         
 
 
 
-        }) //Document Ready
+        }) //On Click
 
 
         

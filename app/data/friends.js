@@ -4,52 +4,52 @@
 var friends = [
     {
         "name": "Cindy Ellis",
-        "photo": "./headshots/cindy.jpg",
+        "photo": "https://randomuser.me/api/portraits/women/65.jpg",
         "scores": [1,2,4,4,1,2,5,2,4,2]
     },
     {
         "name": "Ethel Henderson",
-        "photo": "./headshots/ethel.jpg",
+        "photo": "https://randomuser.me/api/portraits/women/76.jpg",
         "scores": [5,2,1,1,4,1,5,2,2,5]
     },
     {
         "name": "Pennie Harmon",
-        "photo": "./headshots/pennie.jpg",
+        "photo": "https://randomuser.me/api/portraits/women/73.jpg",
         "scores": [4,1,5,4,1,5,2,2,1,2]
     },
     {
         "name": "Hazel Crittenden",
-        "photo": "./headshots/hazel.jpg",
+        "photo": "https://randomuser.me/api/portraits/women/48.jpg",
         "scores": [2,2,2,1,2,2,4,2,4,2]
     },
     {
         "name": "Virginia Garver",
-        "photo": "./headshots/virginia.jpg",
+        "photo": "https://randomuser.me/api/portraits/women/92.jpg",
         "scores": [1,2,3,4,1,2,3,3,4,2]
     },
     {
         "name": "Karl Richards",
-        "photo": "./headshots/karl.jpg",
+        "photo": "https://randomuser.me/api/portraits/men/78.jpg",
         "scores": [1,2,1,4,4,2,4,2,4,2]
     },
     {
         "name": "William Cannon",
-        "photo": "./headshots/william.jpg",
+        "photo": "https://randomuser.me/api/portraits/men/54.jpg",
         "scores": [1,5,4,4,1,3,5,2,1,2]
     },
     {
         "name": "Michael Garcia",
-        "photo": "./headshots/michael.jpg",
+        "photo": "https://randomuser.me/api/portraits/men/20.jpg",
         "scores": [1,2,5,4,1,2,1,2,4,2]
     },
     {
         "name": "Ronald Donald",
-        "photo": "./headshots/ronald.jpg",
+        "photo": "https://randomuser.me/api/portraits/men/90.jpg",
         "scores": [1,2,1,4,1,5,2,2,4,2]
     },
     {
         "name": "Kyle Potter",
-        "photo": "./headshots/kyle.jpg",
+        "photo": "https://randomuser.me/api/portraits/men/64.jpg",
         "scores": [1,5,2,4,5,2,4,2,4,2]
     }
 ]
